@@ -1,0 +1,19 @@
+@import "../utils/import";
+
+.dashboard-page {
+  @include page;
+
+  &--title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  &--search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,5 @@
+@import "../utils/import";
+
+.anime-list-page {
+  @include page;
+}

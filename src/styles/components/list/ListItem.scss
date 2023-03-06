@@ -1,0 +1,96 @@
+@import "../../utils/import";
+
+.list-item {
+  display: flex;
+  min-width: 65%;
+  max-width: 65%;
+  margin: 5px;
+  padding: 1rem;
+  box-shadow: $drop-shadow;
+  border-radius: 6px;
+  position: relative;
+
+  &_header {
+    box-shadow: none;
+  }
+
+  &--image {
+    flex: 0.25;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+    }
+ 
+  }
+
+  &--watch-status-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    z-index: 2;
+     
+    &_watching {
+      background-color: $color-status-watching;
+    }
+    &_waiting {
+      background-color: $color-status-waiting;
+    }
+    &_finished {
+      background-color: $color-status-finished;
+    }
+    &_plan_to_watch {
+      background-color: $color-status-plan;
+    }
+    &_dropped {
+      background-color: $color-status-dropped;
+    }
+  }
+
+  &--title {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    padding-left: 1rem;
+
+    &_header {
+      font-weight: bold;
+    }
+  }
+
+  &--detail {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  &--edit {
+    flex: 0.25;
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      width: 15px;
+      height: auto;
+    }
+    :hover {
+      cursor: pointer;
+    }
+  }
+}

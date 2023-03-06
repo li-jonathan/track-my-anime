@@ -1,0 +1,11 @@
+
+@mixin page() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: auto;
+  margin-left: $nav-width;
+  padding: $nav-width;
+  background-color: $color-primary-white;
+}

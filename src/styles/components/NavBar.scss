@@ -1,0 +1,115 @@
+@import "../utils/import";
+
+.nav-bar {
+  width: $nav-width;
+  height: 100vh;
+  position: fixed;
+  background-color: $color-primary-green;
+  box-shadow: $drop-shadow;
+  transition: width 500ms ease;
+  z-index: 10;
+
+  &_expanded {
+    width: $nav-width-expanded;
+  }
+
+  &--nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &--logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center
+  }
+
+  &--logo-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid $color-primary-white;
+
+    &:hover {
+      cursor: pointer;
+      border: 3px solid $color-primary-gold;
+    }
+  }
+
+  &--text-logo {
+    display: none;
+    margin-left: 0.5rem;
+    font-size: 12px;
+    font-weight: bold;
+    color: $color-primary-white;
+    transition: width 500ms ease;
+
+    &--text {
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 1.5px;
+    }
+    
+    &_expanded {
+      display: block;
+      align-self: center;
+      line-height: 19px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--icon {
+    min-width: 2rem;
+    margin: 0 .75rem;
+  }
+
+  &--item {
+    width: 100%;
+
+    &:hover {
+      background-color: $color-primary-white;
+      opacity: .9;
+
+      span {
+        color: $color-primary-green;
+      }
+    }
+
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+
+  &--link {
+    display: flex;
+    align-items: center;
+    height: $nav-width;
+    color: $color-primary-white;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary-green;
+      transition: 500ms;
+    }
+  }
+
+  &--text {
+    display: none;
+    margin-left: 1rem;
+    font-size: 18px;
+    color: $color-primary-white;
+    
+    &_expanded {
+      display: block;
+    }
+  }
+}
